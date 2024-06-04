@@ -1,0 +1,46 @@
+.form-container {
+    max-width:300px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    
+   
+  }
+  
+
+  
+  .form-control {
+    margin-bottom: 15px;
+  }
+  
+  .form-control label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form-control input,
+  .form-control select {
+    color: #000;
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+  }
+  
+  .error {
+    color: red;
+    font-size: 0.875em;
+  }
+  
+  button {
+    width: fit-content;
+    padding: 10px;
+    
+    background-color: transparent;
+    border: none;
+    border-radius: 5px;
+    color: rgb(0, 0, 0);
+    font-size: 1em;
+    cursor: pointer;
+  }
+  
