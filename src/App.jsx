@@ -39,6 +39,7 @@ const App = () => {
       <Experience />
       <Contact />
       <Services />
+  
       <AppStoreBanner />
       <Testimonial />
       <MembershipForm />
