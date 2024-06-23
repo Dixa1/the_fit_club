@@ -1,8 +1,8 @@
-// eslint-disable-next-line no-unused-vars
 import React from "react";
 import { FaCameraRetro } from "react-icons/fa";
 import { GiNotebook } from "react-icons/gi";
 import { SlNote } from "react-icons/sl";
+import { Link } from "react-router-dom"; // Import Link from react-router-dom
 
 const skillsData = [
   {
@@ -11,8 +11,7 @@ const skillsData = [
     icon: (
       <FaCameraRetro className="text-5xl text-primary group-hover:text-black duration-300" />
     ),
-    link: "/#membershipForm",
-
+    link: "/gymservices", // Updated link to navigate to GymServices page
     description: [
       "Monthly access to fitness area.",
       "Training sessions on demand.",
@@ -28,7 +27,7 @@ const skillsData = [
     icon: (
       <GiNotebook className="text-5xl text-primary group-hover:text-black duration-300" />
     ),
-    link: "/#membershipForm",
+    link: "/gymservices", // Updated link to navigate to GymServices page
     description: [
       "Monthly access to fitness area.",
       "Training sessions on demand.",
@@ -44,8 +43,7 @@ const skillsData = [
     icon: (
       <SlNote className="text-5xl text-primary group-hover:text-black duration-500" />
     ),
-    link: "/#membershipForm",
-
+    link: "/gymservices", // Updated link to navigate to GymServices page
     description: [
       "Monthly access to fitness area.",
       "Training sessions on demand.",
@@ -56,6 +54,7 @@ const skillsData = [
     aosDelay: "1000",
   },
 ];
+
 const Services = () => {
   return (
     <>
@@ -76,28 +75,25 @@ const Services = () => {
                 key={skill.name}
                 data-aos="fade-up"
                 data-aos-delay={skill.aosDelay}
-                className="card text-center space-y-3 sm:space-y-6 p-4 sm:py-16 bg-gray-200 dark:bg-dark  hover:bg-primary/20 dark:hover:bg-primary/50 duration-300 text-black dark:text-white rounded-lg group "
+                className="card text-center space-y-3 sm:space-y-6 p-4 sm:py-16 bg-gray-200 dark:bg-dark hover:bg-primary/20 dark:hover:bg-primary/50 duration-300 text-black dark:text-white rounded-lg group"
               >
-                {/* <div className="grid place-items-center">{skill.icon}</div> */}
+                <div className="grid place-items-center">{skill.icon}</div>
                 <h1 className="text-3xl font-bold">{skill.name}</h1>
                 <h1 className="text-center text-4xl font-semibold text-primary">
                   NPR {skill.price}
                 </h1>
-
-                {skill.description.map((desc) => (
-                  // eslint-disable-next-line react/jsx-key
-                  <p>{desc}</p>
+                {skill.description.map((desc, index) => (
+                  <p key={index}>{desc}</p>
                 ))}
                 <p className="font-semibold text-2xl">
-                  {" "}
-                  Duration : {skill.duration}
+                  Duration: {skill.duration}
                 </p>
-                <a
-                  href={skill.link}
-                  className="primary-btn mt-4 group-hover:scale-105  duration-200"
+                <Link
+                  to={skill.link}
+                  className="primary-btn mt-4 group-hover:scale-105 duration-200"
                 >
                   Learn more
-                </a>
+                </Link>
               </div>
             ))}
           </div>

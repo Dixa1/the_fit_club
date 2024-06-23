@@ -17,7 +17,8 @@ export const Navlinks = [
   {
     id: 3,
     name: "JOIN",
-    link: "/#membershipForm",
+      link: "/JoinForm",
+
   },
 ];
 const Footer = () => {

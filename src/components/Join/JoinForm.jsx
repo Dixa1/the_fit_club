@@ -2,9 +2,9 @@
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import React from "react";
 import * as Yup from "yup";
-import "./MembershipForm.css";
+import "./JoinForm.css";
 
-const MembershipForm = () => {
+const JoinForm = () => {
   const initialValues = {
     name: "",
     email: "",
@@ -35,7 +35,7 @@ const MembershipForm = () => {
       name: "gender",
       label: "Gender",
       type: "select",
-      options: ["", "Male", "Female", "Other"],
+      options: ["--choose--", "Male", "Female", "Other"],
     },
     { name: "address", label: "Address", type: "textarea" },
     { name: "city", label: "City", type: "text" },
@@ -45,14 +45,14 @@ const MembershipForm = () => {
       name: "membership",
       label: "Membership Type",
       type: "select",
-      options: ["", "Basic", "Standard", "Premium"],
+      options: ["--choose-- ", "Basic", "Standard", "Premium"],
     },
     { name: "goals", label: "Fitness Goals", type: "textarea" },
     {
       name: "experience",
       label: "Fitness Experience Level",
       type: "select",
-      options: ["", "Beginner", "Intermediate", "Advanced"],
+      options: ["--choose--", "Beginner", "Intermediate", "Advanced"],
     },
     { name: "referral", label: "How did you hear about us?", type: "text" },
     {
@@ -140,4 +140,4 @@ const MembershipForm = () => {
   );
 };
 
-export default MembershipForm;
+export default JoinForm;
