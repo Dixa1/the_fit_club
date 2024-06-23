@@ -1,3 +1,4 @@
+// hompage services
 import React from "react";
 import { FaCameraRetro } from "react-icons/fa";
 import { GiNotebook } from "react-icons/gi";
