@@ -89,7 +89,9 @@ const JoinForm = () => {
 
   return (
     <div className="form-container" id="join">
-      <h1>Gym Membership Form</h1>
+       <h1 className="text-3xl font-bold text-center sm:text-4xl ">
+          Gym <span className="text-primary">Membership</span> Form
+        </h1>
       <Formik
         initialValues={initialValues}
         validationSchema={validationSchema}
